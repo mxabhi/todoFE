@@ -1,1 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+/* General body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container to center content */
+  .container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Style for primary button */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+  }
+  
+  /* Style for success button */
+  .btn-success {
+    background-color: #28a745;
+    border: none;
+    color: white;
+  }
+  
+  /* Style for info button */
+  .btn-info {
+    background-color: #17a2b8;
+    border: none;
+    color: white;
+  }
+  
+  /* Style for danger button */
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+  }
+  
+  /* Style for buttons to ensure uniform padding and margins */
+  button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 5px;
+  }
+  
+  button:hover {
+    transform: translateY(-1px);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Style for list items to have some margin between them */
+  .list-group-item {
+    margin-top: 10px;
+  }
+  
+  /* Flex container for buttons */
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .text-center {
+    text-align: center;
+  }
+  

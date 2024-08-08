@@ -1,0 +1,40 @@
+<div>
+    <h2>ToDo List</h2>
+    <div class="mb-3">
+      <input 
+        type="text" 
+        [(ngModel)]="newTodoTitle" 
+        placeholder="New todo title" 
+        class="form-control" 
+      />
+      <button (click)="addTodo()" class="btn btn-primary mt-2">Add New ToDo</button>
+    </div>
+  
+    <ul class="list-group">
+      <li *ngFor="let todo of todos" class="list-group-item">
+        <div>
+          <input 
+            type="checkbox" 
+            [checked]="todo.completed" 
+            (change)="completeTodo(todo)"
+          />
+          <span *ngIf="editingTodoId !== todo.id" [ngClass]="{ 'completed': todo.completed }">
+            {{ todo.title }}
+          </span>
+          <span *ngIf="editingTodoId === todo.id">
+            <input 
+              type="text" 
+              [(ngModel)]="todo.title" 
+              class="form-control d-inline-block w-auto"
+            />
+          </span>
+        </div>
+        <div class="button-container">
+          <button *ngIf="editingTodoId !== todo.id" (click)="editTodo(todo.id!)" class="btn btn-info btn-sm">Edit</button>
+          <button *ngIf="editingTodoId === todo.id" (click)="saveTodo(todo)" class="btn btn-success btn-sm">Save</button>
+          <button (click)="deleteTodo(todo.id!)" class="btn btn-danger btn-sm">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
